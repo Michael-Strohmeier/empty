@@ -1,5 +1,6 @@
 import pandas as pd
 import os
+from config import config
 
 
 def read_from_desktop(path: str) -> pd.DataFrame:
@@ -29,7 +30,8 @@ def main(path: str) -> None:
 
 
 if __name__ == '__main__':
-    path: str = 'C:/Users/Mike/Downloads/downloads/'
+    path = config['path']
+
     main(path)
 
     print('complete')
